@@ -11,7 +11,7 @@
   )
 }}
 
-{% set project_start_date = '2025-11-05' %}
+{% set project_start_date = '2026-02-03' %}
 
 -- bisonfi swap data from instruction_calls table
 WITH swaps AS (
@@ -47,6 +47,7 @@ WITH swaps AS (
     AND {{ incremental_predicate('block_date') }}
     {% else -%}
     AND block_date >= DATE '{{ project_start_date }}'
+    AND block_date < DATE '{{ project_start_date }}' + INTERVAL '1' DAY
     {% endif -%}
 )
 select *
