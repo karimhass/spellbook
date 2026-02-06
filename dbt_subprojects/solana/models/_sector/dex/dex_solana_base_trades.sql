@@ -37,9 +37,10 @@
       , ref('goonfi_solana_base_trades')
       , ref('obric_solana_base_trades')
       , ref('aquifer_solana_base_trades')
+      , ref('alphaq_solana_base_trades')
+      , ref('bisonfi_solana_base_trades')
       ]
 %}
-{# bisonfi_solana_base_trades will be added in follow-up PR after CI verification #}
 
 /*
  intentionally excluded:    , ref('sanctum_router_base_trades')
